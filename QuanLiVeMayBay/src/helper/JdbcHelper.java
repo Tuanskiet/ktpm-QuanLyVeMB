@@ -13,7 +13,7 @@ import java.sql.SQLException;
 public class JdbcHelper {
 
     static String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-    static String dburl = "jdbc:sqlserver://localhost:1433;database=EduSys;integratedSecurity=false;trustServerCertificate=true";
+    static String dburl = "jdbc:sqlserver://localhost:1433;database=QuanliMaybay_ktpm;integratedSecurity=false;trustServerCertificate=true";
     static String user = "sa";
     static String pass = "123";
 

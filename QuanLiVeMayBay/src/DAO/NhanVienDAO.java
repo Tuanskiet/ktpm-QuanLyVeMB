@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class NhanVienDAO implements MainInterface<NhanVien> {
 
-    String selectByID_SQL = "select * from NhanVien where MaNV = ?";
+    String selectByID_SQL = "select * from NhanVien where TenDN = ?";
     String insert_SQL = "insert into NhanVien(MaNV,MatKhau,HoTen,VaiTro) values(?,?,?,?)";
     String update_SQL = "update NhanVien set MatKhau=?, HoTen=?,VaiTro=? where MaNV=?";
     String delete_SQL = "delete from NhanVien where MaNV=?";
@@ -49,19 +49,25 @@ public class NhanVienDAO implements MainInterface<NhanVien> {
     public NhanVien selectById(String maNV) throws Exception {
         try {
             ResultSet rs = JdbcHelper.query(selectByID_SQL, maNV);
+            System.out.println(rs);
+
             list.removeAll(list);
             while (rs.next()) {
                 NhanVien nv = new NhanVien();
                 nv.setMaNV(rs.getString("MaNV"));
-                nv.setMatKhau(rs.getString("MatKhau"));
                 nv.setTenNV(rs.getString("TenNV"));
+                nv.setSDT(rs.getString("SDT"));
+                nv.setDiaChi(rs.getString("DiaChi"));
+                nv.setTenDN(rs.getString("TenDN"));
+                nv.setMatKhau(rs.getString("MatKhau"));
                 nv.setChucVu(rs.getBoolean("ChucVu"));
                 list.add(nv);
             }
             rs.getStatement().getConnection().close();
             return list.get(0);
         } catch (Exception e) {
-            throw new RuntimeException();
+//            throw new RuntimeException();
+            return null;
         }
     }
 

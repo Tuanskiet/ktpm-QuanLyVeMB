@@ -122,7 +122,7 @@ public class FormTaoMK extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDangNhapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDangNhapActionPerformed
-        main m = new main();
+        dangnhap m = new dangnhap();
         m.setVisible(true);
         this.setVisible(false);
 

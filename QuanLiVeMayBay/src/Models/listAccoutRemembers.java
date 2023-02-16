@@ -11,8 +11,9 @@ import java.io.Serializable;
  *
  * @author Admin
  */
-public class listAccoutRemembers implements Serializable{
+public class listAccoutRemembers implements Serializable {
 
+    private static final long serialVersionUID = 1L;
     private String id, pass;
 
     public listAccoutRemembers() {
