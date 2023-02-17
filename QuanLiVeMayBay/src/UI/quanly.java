@@ -16,7 +16,6 @@ public class quanly extends javax.swing.JFrame {
     Color mainColor = new Color(51, 51, 89);
     Color colorChange = new Color(241, 134, 39);
     HeThongForm ht = new HeThongForm();
-    NewJPanel jp = new NewJPanel();
 
     public quanly() {
         initComponents();
@@ -1141,13 +1140,10 @@ public class quanly extends javax.swing.JFrame {
     private void pnlHeThongMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlHeThongMouseClicked
 //        jp.setVisible(true);
         jDesktopPane1.remove(pnlRight);
-        jDesktopPane1.add(jp);
-
 
     }//GEN-LAST:event_pnlHeThongMouseClicked
 
     private void pnlMainMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlMainMouseClicked
-        jDesktopPane1.remove(jp);
         jDesktopPane1.add(pnlRight);
     }//GEN-LAST:event_pnlMainMouseClicked
 
