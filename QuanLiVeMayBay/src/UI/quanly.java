@@ -4,8 +4,12 @@
  */
 package UI;
 
+import Models.DanhMucDAO;
 import helper.Auth;
+import helper.Xcontrol;
 import java.awt.Color;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -13,14 +17,22 @@ import java.awt.Color;
  */
 public class quanly extends javax.swing.JFrame {
 
-    Color mainColor = new Color(51, 51, 89);
-    Color colorChange = new Color(241, 134, 39);
-    HeThongForm ht = new HeThongForm();
+    public static Color mainColor = new Color(51, 51, 89);
+    public static Color colorChange = new Color(241, 134, 39);
 
+//    HeThong ht = new HeThong();
     public quanly() {
         initComponents();
         setLocationRelativeTo(null);
-        chucVu();
+        Xcontrol menu = new Xcontrol(jDesktopPane1);
+
+        List<DanhMucDAO> listItem = new ArrayList<>();
+        listItem.add(new DanhMucDAO("HeThong", pnlHeThong));
+        listItem.add(new DanhMucDAO("Main", pnlMain));
+        listItem.add(new DanhMucDAO("NhanVien", pnlQLNV));
+        listItem.add(new DanhMucDAO("NhanVien", pnlQLNV1));
+
+        menu.setEvent(listItem);
 
     }
 
@@ -141,28 +153,12 @@ public class quanly extends javax.swing.JFrame {
 
         pnlMain.setBackground(new java.awt.Color(51, 51, 89));
         pnlMain.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        pnlMain.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pnlMainMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlMainMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlMainMouseExited(evt);
-            }
-        });
 
         lblHeThong.setBackground(new java.awt.Color(51, 51, 89));
         lblHeThong.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lblHeThong.setForeground(new java.awt.Color(255, 255, 255));
         lblHeThong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/main-menu32.png"))); // NOI18N
         lblHeThong.setText("Màn hình chính ");
-        lblHeThong.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblHeThongMouseEntered(evt);
-            }
-        });
 
         javax.swing.GroupLayout pnlMainLayout = new javax.swing.GroupLayout(pnlMain);
         pnlMain.setLayout(pnlMainLayout);
@@ -183,25 +179,12 @@ public class quanly extends javax.swing.JFrame {
 
         pnlQLKH1.setBackground(new java.awt.Color(51, 51, 89));
         pnlQLKH1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        pnlQLKH1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlQLKH1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlQLKH1MouseExited(evt);
-            }
-        });
 
         lblHeThong2.setBackground(new java.awt.Color(51, 51, 89));
         lblHeThong2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lblHeThong2.setForeground(new java.awt.Color(255, 255, 255));
         lblHeThong2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/client32.png"))); // NOI18N
         lblHeThong2.setText("Quản lý khách hàng ");
-        lblHeThong2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblHeThong2MouseEntered(evt);
-            }
-        });
 
         javax.swing.GroupLayout pnlQLKH1Layout = new javax.swing.GroupLayout(pnlQLKH1);
         pnlQLKH1.setLayout(pnlQLKH1Layout);
@@ -222,25 +205,12 @@ public class quanly extends javax.swing.JFrame {
 
         pnlQLNV1.setBackground(new java.awt.Color(51, 51, 89));
         pnlQLNV1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        pnlQLNV1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlQLNV1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlQLNV1MouseExited(evt);
-            }
-        });
 
         lblHeThong3.setBackground(new java.awt.Color(51, 51, 89));
         lblHeThong3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lblHeThong3.setForeground(new java.awt.Color(255, 255, 255));
         lblHeThong3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/profile32.png"))); // NOI18N
         lblHeThong3.setText("Quản lý nhân viên");
-        lblHeThong3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblHeThong3MouseEntered(evt);
-            }
-        });
 
         javax.swing.GroupLayout pnlQLNV1Layout = new javax.swing.GroupLayout(pnlQLNV1);
         pnlQLNV1.setLayout(pnlQLNV1Layout);
@@ -261,28 +231,12 @@ public class quanly extends javax.swing.JFrame {
 
         pnlQLMB1.setBackground(new java.awt.Color(51, 51, 89));
         pnlQLMB1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        pnlQLMB1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pnlQLMB1MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlQLMB1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlQLMB1MouseExited(evt);
-            }
-        });
 
         lblHeThong4.setBackground(new java.awt.Color(51, 51, 89));
         lblHeThong4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lblHeThong4.setForeground(new java.awt.Color(255, 255, 255));
         lblHeThong4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/plane32.png"))); // NOI18N
         lblHeThong4.setText("Quản lý máy bay");
-        lblHeThong4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblHeThong4MouseEntered(evt);
-            }
-        });
 
         javax.swing.GroupLayout pnlQLMB1Layout = new javax.swing.GroupLayout(pnlQLMB1);
         pnlQLMB1.setLayout(pnlQLMB1Layout);
@@ -303,25 +257,12 @@ public class quanly extends javax.swing.JFrame {
 
         pnlQLCB1.setBackground(new java.awt.Color(51, 51, 89));
         pnlQLCB1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        pnlQLCB1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlQLCB1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlQLCB1MouseExited(evt);
-            }
-        });
 
         lblHeThong5.setBackground(new java.awt.Color(51, 51, 89));
         lblHeThong5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lblHeThong5.setForeground(new java.awt.Color(255, 255, 255));
         lblHeThong5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/flight-route32.png"))); // NOI18N
         lblHeThong5.setText("Quản lý chuyến bay ");
-        lblHeThong5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblHeThong5MouseEntered(evt);
-            }
-        });
 
         javax.swing.GroupLayout pnlQLCB1Layout = new javax.swing.GroupLayout(pnlQLCB1);
         pnlQLCB1.setLayout(pnlQLCB1Layout);
@@ -342,25 +283,12 @@ public class quanly extends javax.swing.JFrame {
 
         pnlQLV1.setBackground(new java.awt.Color(51, 51, 89));
         pnlQLV1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        pnlQLV1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlQLV1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlQLV1MouseExited(evt);
-            }
-        });
 
         lblHeThong7.setBackground(new java.awt.Color(51, 51, 89));
         lblHeThong7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lblHeThong7.setForeground(new java.awt.Color(255, 255, 255));
         lblHeThong7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/ticket32.png"))); // NOI18N
         lblHeThong7.setText("Quản lý vé ");
-        lblHeThong7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblHeThong7MouseEntered(evt);
-            }
-        });
 
         javax.swing.GroupLayout pnlQLV1Layout = new javax.swing.GroupLayout(pnlQLV1);
         pnlQLV1.setLayout(pnlQLV1Layout);
@@ -381,25 +309,12 @@ public class quanly extends javax.swing.JFrame {
 
         pnlThongKe1.setBackground(new java.awt.Color(51, 51, 89));
         pnlThongKe1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        pnlThongKe1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlThongKe1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlThongKe1MouseExited(evt);
-            }
-        });
 
         lblHeThong8.setBackground(new java.awt.Color(51, 51, 89));
         lblHeThong8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lblHeThong8.setForeground(new java.awt.Color(255, 255, 255));
         lblHeThong8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/bar-chart32.png"))); // NOI18N
         lblHeThong8.setText("Thống kê");
-        lblHeThong8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblHeThong8MouseEntered(evt);
-            }
-        });
 
         javax.swing.GroupLayout pnlThongKe1Layout = new javax.swing.GroupLayout(pnlThongKe1);
         pnlThongKe1.setLayout(pnlThongKe1Layout);
@@ -420,28 +335,12 @@ public class quanly extends javax.swing.JFrame {
 
         pnlHeThong.setBackground(new java.awt.Color(51, 51, 89));
         pnlHeThong.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        pnlHeThong.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pnlHeThongMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlHeThongMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlHeThongMouseExited(evt);
-            }
-        });
 
         lblHeThong9.setBackground(new java.awt.Color(51, 51, 89));
         lblHeThong9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lblHeThong9.setForeground(new java.awt.Color(255, 255, 255));
         lblHeThong9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/system-update32.png"))); // NOI18N
         lblHeThong9.setText("Hệ thống");
-        lblHeThong9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblHeThong9MouseEntered(evt);
-            }
-        });
 
         javax.swing.GroupLayout pnlHeThongLayout = new javax.swing.GroupLayout(pnlHeThong);
         pnlHeThong.setLayout(pnlHeThongLayout);
@@ -538,7 +437,7 @@ public class quanly extends javax.swing.JFrame {
                 .addComponent(jLabel39)
                 .addGap(66, 66, 66)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                 .addComponent(jLabel40)
                 .addGap(80, 80, 80)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -578,14 +477,6 @@ public class quanly extends javax.swing.JFrame {
         pnlRight.setBackground(new java.awt.Color(27, 27, 54));
 
         pnlQLNV.setBackground(new java.awt.Color(51, 51, 89));
-        pnlQLNV.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlQLNVMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlQLNVMouseExited(evt);
-            }
-        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/profile64.png"))); // NOI18N
 
@@ -630,14 +521,6 @@ public class quanly extends javax.swing.JFrame {
         );
 
         pnlQLKH.setBackground(new java.awt.Color(51, 51, 89));
-        pnlQLKH.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlQLKHMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlQLKHMouseExited(evt);
-            }
-        });
 
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/client64.png"))); // NOI18N
 
@@ -678,14 +561,6 @@ public class quanly extends javax.swing.JFrame {
         );
 
         pnlQLMB.setBackground(new java.awt.Color(51, 51, 89));
-        pnlQLMB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlQLMBMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlQLMBMouseExited(evt);
-            }
-        });
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/plane64.png"))); // NOI18N
 
@@ -730,14 +605,6 @@ public class quanly extends javax.swing.JFrame {
         );
 
         pnlQLV.setBackground(new java.awt.Color(51, 51, 89));
-        pnlQLV.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlQLVMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlQLVMouseExited(evt);
-            }
-        });
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/ticket64.png"))); // NOI18N
 
@@ -782,14 +649,6 @@ public class quanly extends javax.swing.JFrame {
         );
 
         pnlQLCB.setBackground(new java.awt.Color(51, 51, 89));
-        pnlQLCB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlQLCBMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlQLCBMouseExited(evt);
-            }
-        });
 
         jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/flight-route64.png"))); // NOI18N
 
@@ -834,14 +693,6 @@ public class quanly extends javax.swing.JFrame {
         );
 
         pnlThongKe.setBackground(new java.awt.Color(51, 51, 89));
-        pnlThongKe.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlThongKeMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlThongKeMouseExited(evt);
-            }
-        });
 
         jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/bar-chart64.png"))); // NOI18N
 
@@ -890,13 +741,13 @@ public class quanly extends javax.swing.JFrame {
                 .addGroup(pnlRightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlRightLayout.createSequentialGroup()
                         .addComponent(pnlQLV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(pnlThongKe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlRightLayout.createSequentialGroup()
                         .addGroup(pnlRightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(pnlQLNV, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(pnlQLMB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                         .addGroup(pnlRightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(pnlQLCB, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(pnlQLKH, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -926,11 +777,9 @@ public class quanly extends javax.swing.JFrame {
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 762, Short.MAX_VALUE)
             .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                    .addComponent(pnlRight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(pnlRight, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -954,13 +803,9 @@ public class quanly extends javax.swing.JFrame {
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(0, 0, 0)
-                        .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -976,176 +821,6 @@ public class quanly extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void pnlQLNVMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLNVMouseEntered
-        pnlQLNV.setBackground(colorChange);
-        pnlQLNV1.setBackground(colorChange);
-    }//GEN-LAST:event_pnlQLNVMouseEntered
-
-    private void pnlQLNVMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLNVMouseExited
-        pnlQLNV.setBackground(mainColor);
-        pnlQLNV1.setBackground(mainColor);
-    }//GEN-LAST:event_pnlQLNVMouseExited
-
-    private void pnlQLKHMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLKHMouseEntered
-        pnlQLKH.setBackground(colorChange);
-        pnlQLKH1.setBackground(colorChange);
-    }//GEN-LAST:event_pnlQLKHMouseEntered
-
-    private void pnlQLKHMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLKHMouseExited
-        pnlQLKH.setBackground(mainColor);
-        pnlQLKH1.setBackground(mainColor);
-    }//GEN-LAST:event_pnlQLKHMouseExited
-
-    private void pnlQLMBMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLMBMouseEntered
-        pnlQLMB.setBackground(colorChange);
-        pnlQLMB1.setBackground(colorChange);
-    }//GEN-LAST:event_pnlQLMBMouseEntered
-
-    private void pnlQLMBMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLMBMouseExited
-        pnlQLMB.setBackground(mainColor);
-        pnlQLMB1.setBackground(mainColor);
-    }//GEN-LAST:event_pnlQLMBMouseExited
-
-    private void pnlQLCBMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLCBMouseExited
-        pnlQLCB.setBackground(mainColor);
-        pnlQLCB1.setBackground(mainColor);
-    }//GEN-LAST:event_pnlQLCBMouseExited
-
-    private void pnlQLCBMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLCBMouseEntered
-        pnlQLCB.setBackground(colorChange);
-        pnlQLCB1.setBackground(colorChange);
-    }//GEN-LAST:event_pnlQLCBMouseEntered
-
-    private void pnlQLVMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLVMouseEntered
-        pnlQLV.setBackground(colorChange);
-        pnlQLV1.setBackground(colorChange);
-    }//GEN-LAST:event_pnlQLVMouseEntered
-
-    private void pnlQLVMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLVMouseExited
-        pnlQLV.setBackground(mainColor);
-        pnlQLV1.setBackground(mainColor);
-    }//GEN-LAST:event_pnlQLVMouseExited
-
-    private void pnlThongKeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlThongKeMouseEntered
-        pnlThongKe.setBackground(colorChange);
-        pnlThongKe1.setBackground(colorChange);
-    }//GEN-LAST:event_pnlThongKeMouseEntered
-
-    private void pnlThongKeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlThongKeMouseExited
-        pnlThongKe.setBackground(mainColor);
-        pnlThongKe1.setBackground(mainColor);
-    }//GEN-LAST:event_pnlThongKeMouseExited
-
-    private void lblHeThongMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblHeThongMouseEntered
-
-    }//GEN-LAST:event_lblHeThongMouseEntered
-
-    private void lblHeThong2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblHeThong2MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblHeThong2MouseEntered
-
-    private void lblHeThong3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblHeThong3MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblHeThong3MouseEntered
-
-    private void lblHeThong4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblHeThong4MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblHeThong4MouseEntered
-
-    private void lblHeThong5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblHeThong5MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblHeThong5MouseEntered
-
-    private void lblHeThong7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblHeThong7MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblHeThong7MouseEntered
-
-    private void lblHeThong8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblHeThong8MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblHeThong8MouseEntered
-
-    private void lblHeThong9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblHeThong9MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblHeThong9MouseEntered
-
-    private void pnlMainMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlMainMouseEntered
-        pnlMain.setBackground(colorChange);
-    }//GEN-LAST:event_pnlMainMouseEntered
-
-    private void pnlMainMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlMainMouseExited
-        pnlMain.setBackground(mainColor);
-    }//GEN-LAST:event_pnlMainMouseExited
-
-    private void pnlQLNV1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLNV1MouseEntered
-        pnlQLNV1.setBackground(colorChange);
-    }//GEN-LAST:event_pnlQLNV1MouseEntered
-
-    private void pnlQLNV1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLNV1MouseExited
-        pnlQLNV1.setBackground(mainColor);
-    }//GEN-LAST:event_pnlQLNV1MouseExited
-
-    private void pnlQLMB1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLMB1MouseClicked
-
-    }//GEN-LAST:event_pnlQLMB1MouseClicked
-
-    private void pnlQLMB1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLMB1MouseExited
-        pnlQLMB1.setBackground(mainColor);
-    }//GEN-LAST:event_pnlQLMB1MouseExited
-
-    private void pnlQLCB1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLCB1MouseEntered
-        pnlQLCB1.setBackground(colorChange);
-    }//GEN-LAST:event_pnlQLCB1MouseEntered
-
-    private void pnlQLCB1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLCB1MouseExited
-        pnlQLCB1.setBackground(mainColor);
-    }//GEN-LAST:event_pnlQLCB1MouseExited
-
-    private void pnlQLV1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLV1MouseEntered
-        pnlQLV1.setBackground(colorChange);
-    }//GEN-LAST:event_pnlQLV1MouseEntered
-
-    private void pnlQLV1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLV1MouseExited
-        pnlQLV1.setBackground(mainColor);
-    }//GEN-LAST:event_pnlQLV1MouseExited
-
-    private void pnlThongKe1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlThongKe1MouseEntered
-        pnlThongKe1.setBackground(colorChange);
-    }//GEN-LAST:event_pnlThongKe1MouseEntered
-
-    private void pnlThongKe1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlThongKe1MouseExited
-        pnlThongKe1.setBackground(mainColor);
-    }//GEN-LAST:event_pnlThongKe1MouseExited
-
-    private void pnlHeThongMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlHeThongMouseEntered
-        pnlHeThong.setBackground(colorChange);
-    }//GEN-LAST:event_pnlHeThongMouseEntered
-
-    private void pnlHeThongMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlHeThongMouseExited
-        pnlHeThong.setBackground(mainColor);
-    }//GEN-LAST:event_pnlHeThongMouseExited
-
-    private void pnlQLMB1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLMB1MouseEntered
-        pnlQLMB1.setBackground(colorChange);
-    }//GEN-LAST:event_pnlQLMB1MouseEntered
-
-    private void pnlQLKH1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLKH1MouseEntered
-        pnlQLKH1.setBackground(colorChange);
-    }//GEN-LAST:event_pnlQLKH1MouseEntered
-
-    private void pnlQLKH1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLKH1MouseExited
-        pnlQLKH1.setBackground(mainColor);
-    }//GEN-LAST:event_pnlQLKH1MouseExited
-
-    private void pnlHeThongMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlHeThongMouseClicked
-//        jp.setVisible(true);
-        jDesktopPane1.remove(pnlRight);
-
-    }//GEN-LAST:event_pnlHeThongMouseClicked
-
-    private void pnlMainMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlMainMouseClicked
-        jDesktopPane1.add(pnlRight);
-    }//GEN-LAST:event_pnlMainMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1212,7 +887,6 @@ public class quanly extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel6;
@@ -1221,7 +895,6 @@ public class quanly extends javax.swing.JFrame {
     private javax.swing.JLabel lblHeThong3;
     private javax.swing.JLabel lblHeThong4;
     private javax.swing.JLabel lblHeThong5;
-    private javax.swing.JLabel lblHeThong6;
     private javax.swing.JLabel lblHeThong7;
     private javax.swing.JLabel lblHeThong8;
     private javax.swing.JLabel lblHeThong9;

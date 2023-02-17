@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UI;
 
@@ -8,12 +8,12 @@ package UI;
  *
  * @author FPT
  */
-public class HeThongForm extends javax.swing.JInternalFrame {
+public class HeThong extends javax.swing.JPanel {
 
     /**
-     * Creates new form HeThongForm
+     * Creates new form HeThong
      */
-    public HeThongForm() {
+    public HeThong() {
         initComponents();
     }
 
@@ -251,7 +251,7 @@ public class HeThongForm extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(pnlQLNV4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnlQLNV1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -264,11 +264,11 @@ public class HeThongForm extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(pnlQLNV4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnlQLNV2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(204, Short.MAX_VALUE))
+                .addContainerGap(236, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -277,8 +277,6 @@ public class HeThongForm extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void pnlQLNVMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLNVMouseEntered
@@ -286,7 +284,7 @@ public class HeThongForm extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_pnlQLNVMouseEntered
 
     private void pnlQLNVMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLNVMouseExited
- 
+
     }//GEN-LAST:event_pnlQLNVMouseExited
 
     private void pnlQLNV1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLNV1MouseEntered
@@ -316,9 +314,6 @@ public class HeThongForm extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -334,7 +329,6 @@ public class HeThongForm extends javax.swing.JInternalFrame {
     private javax.swing.JPanel pnlQLNV;
     private javax.swing.JPanel pnlQLNV1;
     private javax.swing.JPanel pnlQLNV2;
-    private javax.swing.JPanel pnlQLNV3;
     private javax.swing.JPanel pnlQLNV4;
     // End of variables declaration//GEN-END:variables
 }
