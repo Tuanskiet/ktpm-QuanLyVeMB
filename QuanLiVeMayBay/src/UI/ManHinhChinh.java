@@ -5,11 +5,8 @@
 package UI;
 
 import Models.DanhMucDAO;
-import static UI.quanly.colorChange;
 import static UI.quanly.listItem;
-import static UI.quanly.mainColor;
 import helper.Xcontrol;
-import javax.swing.JPanel;
 
 /**
  *
@@ -20,11 +17,8 @@ public class ManHinhChinh extends javax.swing.JPanel {
     /**
      * Creates new form ManHinhChinh
      */
-    public ManHinhChinh() {
-        initComponents();
-//       
-    }
-     public ManHinhChinh(JPanel root) {
+   
+     public ManHinhChinh() {
         initComponents();
         listItem.add(new DanhMucDAO("NhanVien", pnlQLNV));
         listItem.add(new DanhMucDAO("KhachHang", pnlQLKH));
@@ -398,15 +392,12 @@ public class ManHinhChinh extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void pnlQLKHMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLKHMouseEntered
-        pnlQLKH.setBackground(colorChange);
     }//GEN-LAST:event_pnlQLKHMouseEntered
 
     private void pnlQLKHMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLKHMouseExited
-        pnlQLKH.setBackground(mainColor);
     }//GEN-LAST:event_pnlQLKHMouseExited
 
     private void pnlQLMBMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlQLMBMouseExited
-        pnlQLMB.setBackground(mainColor);
     }//GEN-LAST:event_pnlQLMBMouseExited
 
 

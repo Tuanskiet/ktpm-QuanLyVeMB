@@ -6,8 +6,10 @@ package UI;
 
 import Models.DanhMucDAO;
 import static UI.quanly.listItem;
+import static UI.quanly.showView;
+import helper.Auth;
+import helper.MsgBox;
 import helper.Xcontrol;
-import javax.swing.JPanel;
 
 /**
  *
@@ -20,14 +22,11 @@ public class HeThong extends javax.swing.JPanel {
      */
     public HeThong() {
         initComponents();
-    }
-    public HeThong(JPanel jpRoot) {
-        initComponents();
         listItem.add(new DanhMucDAO("DoiMK", pnlDoiMK));
         listItem.add(new DanhMucDAO("DangXuat", pnlDangXuat));
         listItem.add(new DanhMucDAO("HuongDan", pnlhuongDan));
         listItem.add(new DanhMucDAO("LienHe", pnlLienHe));
-        Xcontrol x = new Xcontrol(jpRoot);
+        Xcontrol x = new Xcontrol(this);
         x.setEvent(listItem);
     }
 
@@ -113,6 +112,9 @@ public class HeThong extends javax.swing.JPanel {
 
         pnlDangXuat.setBackground(new java.awt.Color(51, 51, 89));
         pnlDangXuat.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlDangXuatMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 pnlDangXuatMouseEntered(evt);
             }
@@ -331,6 +333,14 @@ public class HeThong extends javax.swing.JPanel {
     private void pnlDoiMKMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlDoiMKMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_pnlDoiMKMouseClicked
+
+    private void pnlDangXuatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlDangXuatMouseClicked
+        MsgBox.alert(this, "Bạn muốn đăng xuất khỏi ứng dụng ? ");
+        Auth.user = null;
+        showView();
+ 
+
+    }//GEN-LAST:event_pnlDangXuatMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

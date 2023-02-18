@@ -20,7 +20,7 @@ public class NhanVienDAO implements MainInterface<NhanVien> {
 
     String selectByID_SQL = "select * from NhanVien where TenDN = ?";
     String insert_SQL = "insert into NhanVien(MaNV,MatKhau,HoTen,VaiTro) values(?,?,?,?)";
-    String update_SQL = "update NhanVien set MatKhau=?, TenNV=?,VaiTro=? where MaNV=?";
+    String update_SQL = "update NhanVien set MatKhau=?, TenNV=?,ChucVu=? where MaNV=?";
     String delete_SQL = "delete from NhanVien where MaNV=?";
     String selectAll_SQL = "select * From NhanVien";
 

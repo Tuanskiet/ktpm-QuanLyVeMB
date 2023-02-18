@@ -39,7 +39,6 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
                       <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="txtUserName" alignment="0" max="32767" attributes="0"/>
                       <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -50,7 +49,8 @@
                           <Component id="btnLogin1" min="-2" pref="201" max="-2" attributes="0"/>
                       </Group>
                       <Component id="txtPassWord" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jLabel7" alignment="0" min="-2" pref="468" max="-2" attributes="0"/>
+                      <Component id="jLabel7" alignment="0" pref="468" max="32767" attributes="0"/>
+                      <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="175" max="32767" attributes="0"/>
               </Group>

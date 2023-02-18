@@ -49,7 +49,9 @@ public class Xcontrol {
         this.listItem = listItem;
 
         for (DanhMucDAO item : listItem) {
+//            if (item.getKind().equals("DangNhap")) continue;
             item.getJpn().addMouseListener(new LabelEvent(item.getKind(), item.getJpn()));
+
         }
     }
 
@@ -69,7 +71,7 @@ public class Xcontrol {
         public void mouseClicked(MouseEvent e) {
             switch (kind) {
                 case "Main":
-                    node = new ManHinhChinh(root);
+                    node = new ManHinhChinh();
                     break;
             }
             switch (kind) {
@@ -104,7 +106,7 @@ public class Xcontrol {
             }
             switch (kind) {
                 case "HeThong":
-                    node = new HeThong(root);
+                    node = new HeThong();
                     break;
             }
             switch (kind) {
@@ -112,7 +114,7 @@ public class Xcontrol {
                     node = new QuenMatKhau();
                     break;
             }
-        
+         
 
             root.removeAll();
             root.setLayout(new BorderLayout());
@@ -154,5 +156,8 @@ public class Xcontrol {
                 }
             }
         }
+    }
+    public static void exit(){
+        System.exit(0);
     }
 }
