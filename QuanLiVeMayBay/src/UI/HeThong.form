@@ -39,13 +39,13 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="pnlQLNV2" alignment="0" max="32767" attributes="0"/>
-                      <Component id="pnlQLNV" alignment="0" max="32767" attributes="0"/>
+                      <Component id="pnlLienHe" alignment="0" max="32767" attributes="0"/>
+                      <Component id="pnlDoiMK" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="pnlQLNV4" alignment="0" max="32767" attributes="0"/>
-                      <Component id="pnlQLNV1" alignment="0" max="32767" attributes="0"/>
+                      <Component id="pnlhuongDan" alignment="0" max="32767" attributes="0"/>
+                      <Component id="pnlDangXuat" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -56,13 +56,13 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="pnlQLNV1" alignment="0" max="32767" attributes="0"/>
-                      <Component id="pnlQLNV" alignment="0" max="32767" attributes="0"/>
+                      <Component id="pnlDangXuat" alignment="0" max="32767" attributes="0"/>
+                      <Component id="pnlDoiMK" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="pnlQLNV4" alignment="0" max="32767" attributes="0"/>
-                      <Component id="pnlQLNV2" alignment="0" max="32767" attributes="0"/>
+                      <Component id="pnlhuongDan" alignment="0" max="32767" attributes="0"/>
+                      <Component id="pnlLienHe" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="236" max="32767" attributes="0"/>
               </Group>
@@ -70,15 +70,16 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="pnlQLNV">
+        <Container class="javax.swing.JPanel" name="pnlDoiMK">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="59" green="33" red="33" type="rgb"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlQLNVMouseEntered"/>
-            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlQLNVMouseExited"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlDoiMKMouseClicked"/>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlDoiMKMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlDoiMKMouseExited"/>
           </Events>
 
           <Layout>
@@ -120,7 +121,7 @@
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Image/profile64.png"/>
+                  <Image iconType="3" name="/Image/changePassword64.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -148,15 +149,15 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="pnlQLNV1">
+        <Container class="javax.swing.JPanel" name="pnlDangXuat">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="59" green="33" red="33" type="rgb"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlQLNV1MouseEntered"/>
-            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlQLNV1MouseExited"/>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlDangXuatMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlDangXuatMouseExited"/>
           </Events>
 
           <Layout>
@@ -198,7 +199,7 @@
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Image/profile64.png"/>
+                  <Image iconType="3" name="/Image/check-out64.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -226,15 +227,15 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="pnlQLNV2">
+        <Container class="javax.swing.JPanel" name="pnlLienHe">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="59" green="33" red="33" type="rgb"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlQLNV2MouseEntered"/>
-            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlQLNV2MouseExited"/>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlLienHeMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlLienHeMouseExited"/>
           </Events>
 
           <Layout>
@@ -276,7 +277,7 @@
             <Component class="javax.swing.JLabel" name="jLabel7">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Image/profile64.png"/>
+                  <Image iconType="3" name="/Image/customer-support64.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -304,15 +305,15 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="pnlQLNV4">
+        <Container class="javax.swing.JPanel" name="pnlhuongDan">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="59" green="33" red="33" type="rgb"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlQLNV4MouseEntered"/>
-            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlQLNV4MouseExited"/>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlhuongDanMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlhuongDanMouseExited"/>
           </Events>
 
           <Layout>
@@ -354,7 +355,7 @@
             <Component class="javax.swing.JLabel" name="jLabel13">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Image/profile64.png"/>
+                  <Image iconType="3" name="/Image/guide64.png"/>
                 </Property>
               </Properties>
             </Component>

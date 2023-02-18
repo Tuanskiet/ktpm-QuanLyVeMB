@@ -5,14 +5,15 @@
 package helper;
 
 import Models.DanhMucDAO;
+import UI.DoiMK;
 import UI.HeThong;
 import UI.ManHinhChinh;
+import UI.QuenMatKhau;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.List;
-import javax.swing.JDesktopPane;
 import javax.swing.JPanel;
 
 /**
@@ -21,25 +22,25 @@ import javax.swing.JPanel;
  */
 public class Xcontrol {
 
-    private JDesktopPane root;
+    private JPanel root;
     private String kinSelected = "";
     Color mainColor = new Color(51, 51, 89);
     Color colorChange = new Color(241, 134, 39);
 
     private List<DanhMucDAO> listItem = null;
 
-    public Xcontrol(JDesktopPane jdpRoot) {
-        this.root = jdpRoot;
+    public Xcontrol() {
     }
 
-    public void setView(JPanel jpnItem) {
-        kinSelected = "Main";
+    public Xcontrol(JPanel pnlRoot) {
+        this.root = pnlRoot;
+    }
 
-        jpnItem.setBackground(colorChange);
-
+    public void setView(JPanel panel) {
+//        kinSelected = "DangNhap";
         root.removeAll();
         root.setLayout(new BorderLayout());
-        root.add(new ManHinhChinh());
+        root.add(panel);
         root.validate();
         root.repaint();
     }
@@ -68,7 +69,7 @@ public class Xcontrol {
         public void mouseClicked(MouseEvent e) {
             switch (kind) {
                 case "Main":
-                    node = new ManHinhChinh();
+                    node = new ManHinhChinh(root);
                     break;
             }
             switch (kind) {
@@ -97,15 +98,21 @@ public class Xcontrol {
                     break;
             }
             switch (kind) {
-                case "DoiMatKhau":
-//                    node = new DoiMatKhau();
+                case "DoiMK":
+                    node = new DoiMK();
                     break;
             }
             switch (kind) {
                 case "HeThong":
-                    node = new HeThong();
+                    node = new HeThong(root);
                     break;
             }
+            switch (kind) {
+                case "QuenMK":
+                    node = new QuenMatKhau();
+                    break;
+            }
+        
 
             root.removeAll();
             root.setLayout(new BorderLayout());
@@ -137,6 +144,7 @@ public class Xcontrol {
         public void mouseReleased(MouseEvent e) {
 //            jpnItem.setBackground(mainColor);
         }
+
         private void setChangeBackground(String kind) {
             for (DanhMucDAO item : listItem) {
                 if (item.getKind().equalsIgnoreCase(kind)) {
