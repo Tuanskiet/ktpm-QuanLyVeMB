@@ -74,7 +74,7 @@ public class dn extends javax.swing.JPanel {
         txtPassWord = new javax.swing.JPasswordField();
         chkNhoMK = new javax.swing.JCheckBox();
         jLabel7 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblQuenMK = new javax.swing.JLabel();
         btnLogin = new javax.swing.JButton();
         btnLogin1 = new javax.swing.JButton();
 
@@ -113,13 +113,19 @@ public class dn extends javax.swing.JPanel {
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Đăng nhập");
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 138, 237));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Quên mật khẩu ?");
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblQuenMK.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        lblQuenMK.setForeground(new java.awt.Color(200, 165, 75));
+        lblQuenMK.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblQuenMK.setText("Quên mật khẩu ?");
+        lblQuenMK.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                lblQuenMKMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblQuenMKMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblQuenMKMouseExited(evt);
             }
         });
 
@@ -160,7 +166,7 @@ public class dn extends javax.swing.JPanel {
                         .addComponent(btnLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(txtPassWord)
                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lblQuenMK, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(175, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -183,7 +189,7 @@ public class dn extends javax.swing.JPanel {
                     .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel1)
+                .addComponent(lblQuenMK)
                 .addContainerGap(118, Short.MAX_VALUE))
         );
 
@@ -211,9 +217,9 @@ public class dn extends javax.swing.JPanel {
         this.enter(evt);
     }//GEN-LAST:event_txtPassWordKeyPressed
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+    private void lblQuenMKMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblQuenMKMouseClicked
         menu.setView(new QuenMatKhau());
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_lblQuenMKMouseClicked
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         login();
@@ -223,16 +229,24 @@ public class dn extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLogin1ActionPerformed
 
+    private void lblQuenMKMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblQuenMKMouseEntered
+        lblQuenMK.setForeground(new Color(63,114,232)); 
+    }//GEN-LAST:event_lblQuenMKMouseEntered
+
+    private void lblQuenMKMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblQuenMKMouseExited
+        lblQuenMK.setForeground(new Color(200,165,75)); 
+    }//GEN-LAST:event_lblQuenMKMouseExited
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
     private javax.swing.JButton btnLogin1;
     private javax.swing.JCheckBox chkNhoMK;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblQuenMK;
     private javax.swing.JPasswordField txtPassWord;
     private javax.swing.JTextField txtUserName;
     // End of variables declaration//GEN-END:variables
