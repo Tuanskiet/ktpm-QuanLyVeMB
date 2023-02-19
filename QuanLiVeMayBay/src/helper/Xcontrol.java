@@ -7,6 +7,7 @@ package helper;
 import Models.DanhMucDAO;
 import UI.DoiMK;
 import UI.HeThong;
+import UI.JPChuyenBay;
 import UI.ManHinhChinh;
 import UI.QuenMatKhau;
 import java.awt.BorderLayout;
@@ -80,20 +81,11 @@ public class Xcontrol {
                     break;
             }
             switch (kind) {
-                case "KhoaHoc":
-//                    node = new QLKhoaHOc();
+                case "QLChuyenBay":
+                    node = new JPChuyenBay();
                     break;
             }
-            switch (kind) {
-                case "NguoiHoc":
-//                    node = new QLNguoiHoc();
-                    break;
-            }
-            switch (kind) {
-                case "HocVien":
-//                    node = new QLHocVien();
-                    break;
-            }
+           
             switch (kind) {
                 case "ThongKe":
 //                    node = new QLThongKe();
