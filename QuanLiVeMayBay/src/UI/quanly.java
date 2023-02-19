@@ -18,7 +18,8 @@ import java.util.List;
 public class quanly extends javax.swing.JFrame {
 
     public static Color mainColor = new Color(51, 51, 89);
-    public static Color colorChange = new Color(241, 134, 39);
+    public static Color colorChange = new Color(241, 134, 39);//est
+    
 
 //    HeThong ht = new HeThong();
     public quanly() {
@@ -33,7 +34,7 @@ public class quanly extends javax.swing.JFrame {
         listItem.add(new DanhMucDAO("NhanVien", pnlQLNV1));
 
         menu.setEvent(listItem);
-
+        
     }
 
     /**
