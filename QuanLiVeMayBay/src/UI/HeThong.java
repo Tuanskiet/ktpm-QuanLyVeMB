@@ -6,7 +6,7 @@ package UI;
 
 import Models.DanhMucDAO;
 import static UI.quanly.listItem;
-import static UI.quanly.showView;
+import static UI.quanly.menu;
 import helper.Auth;
 import helper.MsgBox;
 import helper.Xcontrol;
@@ -337,7 +337,7 @@ public class HeThong extends javax.swing.JPanel {
     private void pnlDangXuatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlDangXuatMouseClicked
         MsgBox.alert(this, "Bạn muốn đăng xuất khỏi ứng dụng ? ");
         Auth.user = null;
-        showView();
+        menu.setView(new ManHinhChinh());
  
 
     }//GEN-LAST:event_pnlDangXuatMouseClicked

@@ -6,6 +6,8 @@ package UI;
 
 import DAO.NhanVienDAO;
 import static UI.quanly.menu;
+import helper.Auth;
+import helper.MsgBox;
 import helper.XEmail;
 import java.util.Random;
 
@@ -156,23 +158,28 @@ public class QuenMatKhau extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        try {
+            Auth.user = qlNV.selectByEmail(txtEmail.getText());
+        } catch (Exception ex) {
+            MsgBox.alert(jPanel1, "Email không tồn tại!");
+        }
+        menu.setView(new MKMoi());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnGuiMaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuiMaActionPerformed
-    
+
         lblSendCode.setVisible(true);
         Random generator = new Random();
-         maXn = generator.nextInt(1001);
+        maXn = generator.nextInt(1001);
 
         String contentEmail
                 = "<h3>Xin chào !</h3>"
-                + "<p>Mã xác minh của bạn là <strong>" + maXn +"</strong> </p>"
+                + "<p>Mã xác minh của bạn là <strong>" + maXn + "</strong> </p>"
                 + "<p>Nhập mã này vào ứng dụng của chúng tôi để kích hoạt tài khoản của bạn.</p>"
                 + "<p>Nếu bạn có bất kỳ câu hỏi nào, hãy gửi email cho chúng tôi : luctuankietkg@gmail.com.</p>"
                 + "<p>Chúng tôi rất vui vì bạn đã ở đây!</p>"
                 + "<p>Nhóm 3</p>";
-        
+
         XEmail.send("stellaprimo99@gmail.com", txtEmail.getText(), "xzynlpriajyjmhqq", contentEmail);
     }//GEN-LAST:event_btnGuiMaActionPerformed
 
