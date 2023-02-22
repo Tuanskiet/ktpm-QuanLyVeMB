@@ -8,6 +8,7 @@ import Models.DanhMucDAO;
 import UI.DoiMK;
 import UI.HeThong;
 import UI.JPChuyenBay;
+import UI.JPThongKe;
 import UI.ManHinhChinh;
 import UI.QuenMatKhau;
 import java.awt.BorderLayout;
@@ -88,7 +89,7 @@ public class Xcontrol {
            
             switch (kind) {
                 case "ThongKe":
-//                    node = new QLThongKe();
+                    node = new JPThongKe();
                     break;
             }
             switch (kind) {

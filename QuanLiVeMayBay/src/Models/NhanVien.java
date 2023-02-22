@@ -11,6 +11,7 @@ package Models;
 public class NhanVien {
     private String maNV;
     private String tenNV;
+     private String email;
     private String SDT;
     private String DiaChi;
     private String TenDN;
@@ -20,7 +21,7 @@ public class NhanVien {
     public NhanVien() {
     }
 
-    public NhanVien(String maNV, String tenNV, String SDT, String DiaChi, String TenDN, String MatKhau, boolean chucVu) {
+    public NhanVien(String maNV, String tenNV, String email,  String SDT, String DiaChi, String TenDN, String MatKhau, boolean chucVu) {
         this.maNV = maNV;
         this.tenNV = tenNV;
         this.SDT = SDT;
@@ -28,6 +29,15 @@ public class NhanVien {
         this.TenDN = TenDN;
         this.MatKhau = MatKhau;
         this.chucVu = chucVu;
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
     
     

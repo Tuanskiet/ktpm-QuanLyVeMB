@@ -6,8 +6,11 @@ package UI;
 
 import DAO.NhanVienDAO;
 import static UI.quanly.menu;
+import helper.Auth;
 import helper.XEmail;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -156,7 +159,14 @@ public class QuenMatKhau extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        try {
+            Auth.user = qlNV.selectByEmail(txtEmail.getText());
+        } catch (Exception ex) {
+            Logger.getLogger(QuenMatKhau.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        menu.setView(new JPMKmoi());
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnGuiMaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuiMaActionPerformed
