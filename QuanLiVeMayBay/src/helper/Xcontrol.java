@@ -10,6 +10,7 @@ import UI.HeThong;
 import UI.JPChuyenBay;
 import UI.JPThongKe;
 import UI.ManHinhChinh;
+import UI.QuanLiKhachHang;
 import UI.QuenMatKhau;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -79,6 +80,11 @@ public class Xcontrol {
             switch (kind) {
                 case "NhanVien":
 //                    node = new QLChuyenDe();
+                    break;
+            }
+            switch (kind) {
+                case "KhachHang":
+                    node = new QuanLiKhachHang();
                     break;
             }
             switch (kind) {
