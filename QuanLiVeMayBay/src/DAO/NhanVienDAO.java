@@ -20,8 +20,8 @@ public class NhanVienDAO implements MainInterface<NhanVien> {
 
     String selectByID_SQL = "select * from NhanVien where TenDN = ?";
     String selectByEmail_SQL = "select * from NhanVien where email = ?";
-    String insert_SQL = "insert into NhanVien(MaNV,MatKhau,HoTen,VaiTro) values(?,?,?,?)";
-    String update_SQL = "update NhanVien set MatKhau=?, TenNV=?,ChucVu=? where MaNV=?";
+    String insert_SQL = "insert into NhanVien values(?,?,?,?, ?,?,?,?)";
+    String update_SQL = "update NhanVien set TenNV=?, Email=?, SDT=?, DiaChi=?, TenDn=? MatKhau=?,ChucVu=? where MaNV=?";
     String delete_SQL = "delete from NhanVien where MaNV=?";
     String selectAll_SQL = "select * From NhanVien";
 
@@ -33,12 +33,12 @@ public class NhanVienDAO implements MainInterface<NhanVien> {
 
     @Override
     public void insert(NhanVien nv) throws Exception {
-        JdbcHelper.update(insert_SQL, nv.getMaNV(), nv.getMatKhau(), nv.getTenNV(), nv.getChucVu());
+        JdbcHelper.update(insert_SQL, nv.getMaNV(), nv.getTenDN(), nv.getEmail(), nv.getSDT(), nv.getDiaChi(), nv.getTenDN(), nv.getMatKhau(), nv.getChucVu());
     }
 
     @Override
     public void update(NhanVien nv) throws Exception {
-        JdbcHelper.update(update_SQL, nv.getMatKhau(), nv.getTenNV(), nv.getChucVu(), nv.getMaNV());
+        JdbcHelper.update(update_SQL,  nv.getTenDN(), nv.getEmail(), nv.getSDT(), nv.getDiaChi(), nv.getTenDN(), nv.getMatKhau(), nv.getChucVu(), nv.getMaNV());
     }
 
     @Override
@@ -104,10 +104,14 @@ public class NhanVienDAO implements MainInterface<NhanVien> {
         ResultSet rs = JdbcHelper.query(selectAll_SQL);
         while (rs.next()) {
             NhanVien nv = new NhanVien();
-            nv.setMaNV(rs.getString("MaNV"));
-            nv.setMatKhau(rs.getString("MatKhau"));
-            nv.setTenNV(rs.getString("HoTen"));
-            nv.setChucVu(rs.getBoolean("VaiTro"));
+                nv.setMaNV(rs.getString("MaNV"));
+                nv.setTenNV(rs.getString("TenNV"));
+                nv.setEmail(rs.getString("email"));
+                nv.setSDT(rs.getString("SDT"));
+                nv.setDiaChi(rs.getString("DiaChi"));
+                nv.setTenDN(rs.getString("TenDN"));
+                nv.setMatKhau(rs.getString("MatKhau"));
+                nv.setChucVu(rs.getBoolean("ChucVu"));
             list.add(nv);
         }
         rs.getStatement().getConnection().close();

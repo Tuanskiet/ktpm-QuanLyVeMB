@@ -5,6 +5,8 @@
 package UI;
 
 import Models.DanhMucDAO;
+import static UI.ManHinhChinh.pnlQLNV;
+import static UI.ManHinhChinh.pnlQLV;
 import helper.Auth;
 import helper.Xcontrol;
 import java.awt.Color;
@@ -36,7 +38,6 @@ public class quanly extends javax.swing.JFrame {
         listItem.add(new DanhMucDAO("ThongKe", pnlThongKe1));
         menu.setEvent(listItem);
         showView();
-
     }
 
     /**
@@ -516,11 +517,11 @@ public class quanly extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblHoTenMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblHoTenMouseEntered
-        lblHoTen.setForeground(new Color(63,114,232)); 
+        lblHoTen.setForeground(new Color(63, 114, 232));
     }//GEN-LAST:event_lblHoTenMouseEntered
 
     private void lblHoTenMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblHoTenMouseExited
-        lblHoTen.setForeground(new Color(200,165,75)); 
+        lblHoTen.setForeground(new Color(200, 165, 75));
     }//GEN-LAST:event_lblHoTenMouseExited
 
     private void lblHoTenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblHoTenMouseClicked
@@ -578,7 +579,7 @@ public class quanly extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JLabel lblHeThong;
     private javax.swing.JLabel lblHeThong2;
-    private javax.swing.JLabel lblHeThong3;
+    public static javax.swing.JLabel lblHeThong3;
     private javax.swing.JLabel lblHeThong4;
     private javax.swing.JLabel lblHeThong5;
     private javax.swing.JLabel lblHeThong7;
@@ -591,8 +592,8 @@ public class quanly extends javax.swing.JFrame {
     private javax.swing.JPanel pnlQLCB1;
     private javax.swing.JPanel pnlQLKH1;
     private javax.swing.JPanel pnlQLMB1;
-    private javax.swing.JPanel pnlQLNV1;
-    private javax.swing.JPanel pnlQLV1;
+    public static javax.swing.JPanel pnlQLNV1;
+    public static javax.swing.JPanel pnlQLV1;
     private javax.swing.JPanel pnlRoot;
     private javax.swing.JPanel pnlThongKe1;
     // End of variables declaration//GEN-END:variables
@@ -604,6 +605,13 @@ public static void showView() {
             String hoTen = Auth.user.getTenNV();
             lblHoTen.setText(hoTen);
             menu.setView(new ManHinhChinh());
+            if (Auth.user.getChucVu()) {
+                pnlQLV1.setVisible(false);
+                pnlQLV.setVisible(false);
+            } else {
+                pnlQLNV1.setVisible(false);
+                pnlQLNV.setVisible(false);
+            }
         }
     }
 

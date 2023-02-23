@@ -10,6 +10,7 @@ import Models.listAccoutRemembers;
 import NewInterface.MainInterface;
 import static UI.quanly.lblHoTen;
 import static UI.quanly.menu;
+import static UI.quanly.showView;
 import helper.Auth;
 import helper.DataValidator;
 import helper.MsgBox;
@@ -280,6 +281,7 @@ private void login() {
                 String hoTen = Auth.user.getTenNV();
                 lblHoTen.setText(hoTen);
                 menu.setView(new ManHinhChinh());
+                showView();
             }
         } catch (Exception ex) {
             MsgBox.showErrorDialog(this, "Lỗi Đăng Nhập!", "Error !");

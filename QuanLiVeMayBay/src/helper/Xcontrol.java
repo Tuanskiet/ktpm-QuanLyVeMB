@@ -8,9 +8,11 @@ import Models.DanhMucDAO;
 import UI.DoiMK;
 import UI.HeThong;
 import UI.JPChuyenBay;
+import UI.JPQLVE;
 import UI.JPThongKe;
 import UI.ManHinhChinh;
 import UI.QuanLiKhachHang;
+import UI.QuanLiNhanVien;
 import UI.QuenMatKhau;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -79,7 +81,7 @@ public class Xcontrol {
             }
             switch (kind) {
                 case "NhanVien":
-//                    node = new QLChuyenDe();
+                    node = new QuanLiNhanVien();
                     break;
             }
             switch (kind) {
@@ -90,6 +92,11 @@ public class Xcontrol {
             switch (kind) {
                 case "QLChuyenBay":
                     node = new JPChuyenBay();
+                    break;
+            }
+             switch (kind) {
+                case "QLVe":
+                    node = new JPQLVE();
                     break;
             }
            

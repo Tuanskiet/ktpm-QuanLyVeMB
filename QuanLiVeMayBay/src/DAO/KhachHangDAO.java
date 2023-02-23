@@ -6,7 +6,6 @@ package DAO;
 
 import Models.KhachHang;
 import NewInterface.KhachhangInterface;
-import NewInterface.MainInterface;
 import helper.JdbcHelper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
